@@ -13,6 +13,7 @@ npm start
 
 ##next
 
--fixed other browser. Especially, for mobile.
+- fixed other browser. Especially, for mobile.
+- also can slide left and right
 
 ## Thanks to: [`http://www.w3cmark.com/2016/fullpage.html`](http://www.w3cmark.com/2016/fullpage.html)

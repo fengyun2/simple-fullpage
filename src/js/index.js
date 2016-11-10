@@ -44,19 +44,19 @@ $scroll.style.display = 'block'
 let page = {
   isScrolling: false,
   start: 0,
-  prev() {
+  prev() { // 上一页, 当且当前页不是第一页时, 可以向上滚动
     if ((current - 1) > 0) {
       current -= 1
       page.move(current)
     }
   },
-  next() {
+  next() { // 下一页, 当且当前页不是最后一页时, 可以向下滚动
     if ((current + 1) <= len) {
       current += 1
       page.move(current)
     }
   },
-  move(index) {
+  move(index) { // 当动画在移动的过程中m 不可以切换页面(可以优化的点有, 当有指示按钮的时候, 当鼠标移到该按钮时, 滚动需要停止)
     page.isScrolling = true
     let di = -(index - 1) * height + 'px'
     page.start = +new Date()
@@ -65,7 +65,7 @@ let page = {
     //   page.isScrolling = false
     // }, 1010)
   },
-  moveEnd() {
+  moveEnd() { // 动画结束, 页面可以继续滑动
     page.end = +new Date()
     console.log('end', (page.end - page.start) / 1000)
     page.isScrolling = false
@@ -81,6 +81,7 @@ const mouseWheelHandle = event => {
   }
   let e = event.originalEvent || event
   deltaY = e.deltaY
+  console.log(`deltaY: ${deltaY}`)
   if (deltaY > 0) {
     page.next()
   } else if (deltaY < 0) {
