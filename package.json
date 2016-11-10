@@ -1,0 +1,32 @@
+{
+  "name": "simple-fullpage",
+  "version": "1.1.1",
+  "description": "simple-fullpage",
+  "dependencies": {
+    "postcss-value-parser": "^1.1.0"
+  },
+  "devDependencies": {
+    "del": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "~2.3.1",
+    "gulp-changed": "^1.3.2",
+    "gulp-debug": "^3.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "~1.2.5",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "~5.1.10",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "~2.0.4",
+    "gulp-sequence": "^0.4.6",
+    "gulp-size": "~2.0.0",
+    "run-sequence": "~1.1.2"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": [
+    "fullpage"
+  ],
+  "author": "Ly",
+  "license": "MIT"
+}
